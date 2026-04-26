@@ -1,11 +1,11 @@
-let x = 1
-let y = 1
+const sizex = 60
+const sizey = 20
+
+let x = parseInt(Math.random() * sizex)
+let y = parseInt(Math.random() * sizey)
 
 let vx = 2
 let vy = 1
-
-const sizex = 60
-const sizey = 20
 
 move()
 
@@ -16,7 +16,7 @@ function move() {
     printMove()
     setTimeout(() => {
         move()
-    }, 200)
+    }, 80)
 }
 
 function changeMove() {
@@ -25,6 +25,7 @@ function changeMove() {
 }
 
 function printMove() {
+    console.clear()
     for (let j = 0; j <= sizey; j++) {
         let px = ""
         for (let i = 0; i <= sizex; i++) {
